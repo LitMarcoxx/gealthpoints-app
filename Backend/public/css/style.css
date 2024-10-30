@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    background-image: url('/images/bg.png'); /* Cambia la ruta a la ubicación de tu imagen */
+    background-size: cover;       /* Escala la imagen para cubrir todo el fondo */
+    background-position: center;  /* Centra la imagen en la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.navbar-brand{
+    font-size: 0rem;
+    margin-right: 0.5rem;
+    color: black
+}
+
+/* Ajuste del navbar para reducir su altura */
+.custom-navbar {
+    padding-top: 0.1rem; /* Ajusta el padding superior */
+    padding-bottom: 0.1rem; /* Ajusta el padding inferior */
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid #8EABD1;
+}
+
+/* Ajuste de padding en los enlaces de navegación para reducir su altura */
+.custom-navbar .nav-link {
+    color: black;
+    font-size: 0.48rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
