@@ -1,12 +1,69 @@
-import React from 'react'
+<!DOCTYPE html>
+<html lang="en">
 
-function Register() {
-    return (
-        <div>
-            <h2>Register Page</h2>
-            {/* Aquí puedes agregar el formulario de registro */}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterPage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="custom-body">
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="images/hPLogo.png" alt="HealthPoints" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Register.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    );
-}
+    </nav>
+    <div class="container-auth2" style="margin-top: 80px;">
+        <h1 class="custom-h1">REGISTRARSE</h1>
+        <div style="text-align: left; padding-left: 90px; padding-right: 90px; display: flex; flex-direction: column; gap: 0px;">
+            <div style="margin: 0; padding: 0;">
+                <label for="nombre" class="label-auth">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div style="margin: 0; padding: 0;">
+                <label for="apellidos" class="label-auth">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+            </div>
+            <div style="margin: 0; padding: 0;">
+                <label for="cedula" class="label-auth">Cédula</label>
+                <input type="text" class="form-control" id="cedula" placeholder="Cédula">
+            </div>
+            <div style="margin: 0; padding: 0;">
+                <label for="correo" class="label-auth">Correo</label>
+                <input type="text" class="form-control" id="correo" placeholder="Correo">
+            </div>
+            <div style="margin: 0; padding: 0;">
+                <label for="contra" class="label-auth">Contraseña</label>
+                <input type="text" class="form-control" id="usuarioCorreo" placeholder="Contraseña">
+            </div>
+            <div style="margin: 0; padding: 0; padding-bottom: 10px; margin-bottom: 10px;">
+                <label for="confirmContra" class="label-auth">Confirmar contraseña</label>
+                <input type="text" class="form-control" id="confirmContra" placeholder="Confirmar contraseña">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center;">
+                <button class="btn btn-iniSesion2" onclick="window.location.href='#'">Registrarse</button>
+                <a class="a-custom" href="./Login.html" rel="noopener noreferrer" style="line-height: 1.1;">¿Ya tienes cuenta?<br>Inicia Sesión</a>
+            </div>
+        </div>
+    </div>
+    <img src="images/fullHPIcon.png" alt="HPLogo" class="corner-image">
+</body>
 
-export default Register;
+</html>

@@ -8,85 +8,12 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 600px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 0.5rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .divider {
-            margin: 20px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .btn {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 0.5rem;
-            cursor: pointer;
-            border: none;
-            border-radius: 2px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-crearCuenta {
-            background-color: #fc3433;
-            color: #fff;
-        }
-
-        .btn-crearCuenta:hover {
-            background-color: #d13434;
-        }
-
-        .btn-iniSesion {
-            background-color: #8EABD1;
-            color: #fff;
-        }
-
-        .btn-iniSesion:hover {
-            background-color: #9fb7d8;
-        }
-
-        .or-text {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 20px;
-        }
-    </style>
-
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="/images/hPLogo.png" alt="HealthPoints" width="50"
-                    height="50"></a>
+            <a class="navbar-brand" href="/"><img src="images/hPLogo.png" alt="HealthPoints" width="50" height="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -98,18 +25,23 @@
                         <a class="nav-link active" aria-current="page" href="Login.html">Iniciar Sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./Register.html">Crear Cuenta</a>
+                        <a class="nav-link active" aria-current="page" href="Register.html">Registrarse</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-main">
         <h1>HealthPoints</h1>
-        <p>Medicamentos al alcance de tus compras del día a día. Gana por tí y tu bienestar canjeando fácilmente tus facturas por puntos para el futuro.</p>
-        <button class="btn btn-crearCuenta">Crear Cuenta</button>
-        <div class="divider"></div>
-        <p class="or-text">o inicia sesión</p>
+        <p>Medicamentos al alcance de tus compras del día a día. Gana por tí y tu bienestar canjeando fácilmente tus
+            facturas por puntos para el futuro.</p>
+        <button class="btn btn-crearCuenta" onclick="window.location.href='Register.html'">Registrarse</button>
+        <div class="divider-container">
+            <div class="divider"></div>
+            <span class="divider-text">o</span>
+            <div class="divider"></div>
+        </div>
+        <p>si ya tienes cuenta</p>
         <button class="btn btn-iniSesion" onclick="window.location.href='Login.html'">Iniciar sesión</button>
     </div>
 </body>
