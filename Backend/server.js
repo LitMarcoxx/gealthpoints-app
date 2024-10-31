@@ -14,15 +14,9 @@ const db = mysql.createConnection({
 
 // Ruta para la página de bienvenida HTML en /views/index.html
 app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'views')));
+
 app.use('/', require('./routes/root'))
-
-// Sirve los archivos estáticos de la aplicación React desde 'client/build'
-app.use('/app', express.static(path.join(__dirname, 'client', 'build')))
-
-// Ruta para manejar todas las solicitudes dentro de la aplicación React
-app.get('/app/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-})
 
 // Manejo de errores 404 para cualquier otra ruta
 app.all('*', (req, res) => {

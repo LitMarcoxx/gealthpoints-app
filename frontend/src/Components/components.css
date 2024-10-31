@@ -1,0 +1,42 @@
+.container {
+    text-align: center;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+
+.navbar-brand{
+    font-size: 0rem;
+    margin-right: 0.5rem;
+    color: black
+}
+
+/* Ajuste del navbar para reducir su altura */
+.custom-navbar {
+    padding-top: 0.1rem; /* Ajusta el padding superior */
+    padding-bottom: 0.1rem; /* Ajusta el padding inferior */
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid #8EABD1;
+}
+
+/* Ajuste de padding en los enlaces de navegación para reducir su altura */
+.custom-navbar .nav-link {
+    color: black;
+    font-size: 0.48rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
