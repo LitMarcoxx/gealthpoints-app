@@ -1,38 +1,35 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// import Login from './Components/Login';
-// import Register from './Components/Register';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './Components/General/header';
+import Navbar from './Components/General/navbar';
+import Inicio from './Components/Pages/Inicio';
+import RegistrarFactura from './Components/Pages/RegistrarFactura';
+import MisPuntos from './Components/Pages/MisPuntos';
+import MisSolicitudes from './Components/Pages/MisSolicitudes';
+import Farmacias from './Components/Pages/Farmacias';
 
 function App() {
   return (
-        <Router>
-            <div>
-                <div>
-                    {/* <Link to="/login">
-                        <button>Ir a Login</button>
-                    </Link> */}
-                    {/* <Link to="/register">
-                        <button>Ir a Register</button>
-                    </Link> */}
-                    <Link to="/">
-                        <button>Ir a Home</button>
-                    </Link>
-                </div>
+    <Router>
+      <div>
+        {/* Encabezado */}
+        <Header />
 
-                {/* Define las rutas para cada componente */}
-                <Routes>
-                    {/* <Route path="/login" element={<Login />} /> */}
-                    {/* <Route path="/register" element={<Register />} /> */}
-                    {/* Ruta principal */}
-                    <Route path="/" element={<Home />} />
-                </Routes>
-            </div>
-        </Router>
+        {/* Barra de navegación */}
+        <Navbar />
+
+        {/* Rutas de la aplicación */}
+        <Routes>
+          {/* Aquí defines las rutas de las diferentes páginas */}
+          <Route path="/" element={<Inicio />} />
+          <Route path="/registrar-factura" element={<RegistrarFactura />} />
+          <Route path="/mis-puntos" element={<MisPuntos />} />
+          <Route path="/mis-solicitudes" element={<MisSolicitudes />} />
+          <Route path="/farmacias" element={<Farmacias />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
-
-function Home() {
-  return <h2>Esta es la página principal</h2>;
 }
 
 export default App;
