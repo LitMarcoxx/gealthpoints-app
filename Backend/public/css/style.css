@@ -18,10 +18,10 @@ body {
     display: grid;
     place-content: center;
     padding: 1rem;
-    background-image: url('/images/bg.png'); /* Cambia la ruta a la ubicación de tu imagen */
-    background-size: cover;       /* Escala la imagen para cubrir todo el fondo */
-    background-position: center;  /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('/images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .custom-body {
