@@ -156,6 +156,32 @@ input::placeholder {
     opacity: 1;
 }
 
+select {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.customSelect {
+    height: 40px;
+    padding: 8px 10px;
+    padding-left: 17px;
+    line-height: 24px;
+    font-size: 0.4rem;
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+}
+
+.customSelect:invalid {
+  color: #b4b4b4; /* Muestra el color gris cuando la opción predeterminada está seleccionada */
+}
+
+.customSelect option {
+  color: #000; /* Color negro para todas las demás opciones */
+}
+
 .divider-container {
     display: flex;
     align-items: center;
@@ -171,9 +197,9 @@ input::placeholder {
 }
 
 .divider-text {
-    margin: 0 10px; /* Espacio alrededor de la palabra */
-    color: #555; /* Color del texto */
-    font-size: 0.5rem; /* Tamaño de fuente */
+    margin: 0 10px;
+    color: #555;
+    font-size: 0.5rem;
 }
 
 .btn {
@@ -237,5 +263,5 @@ input::placeholder {
     left: 2.5rem;
     width: 150px;
     height: 150px;
-    z-index: 1000; /* Asegura que la imagen quede sobre otros elementos */
+    z-index: 1000;
 }

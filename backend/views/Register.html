@@ -38,8 +38,12 @@
                 <input type="text" class="form-control" id="nombre" placeholder="Nombre">
             </div>
             <div style="margin: 0; padding: 0;">
-                <label for="apellidos" class="label-auth">Apellidos</label>
-                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+                <label for="pApellido" class="label-auth">Primer Apellido</label>
+                <input type="text" class="form-control" id="pApellido" placeholder="Primer Apellido">
+            </div>
+            <div style="margin: 0; padding: 0;">
+                <label for="sApellido" class="label-auth">Segundo Apellido</label>
+                <input type="text" class="form-control" id="sApellido" placeholder="Segundo Apellido">
             </div>
             <div style="margin: 0; padding: 0;">
                 <label for="cedula" class="label-auth">Cédula</label>
@@ -49,13 +53,26 @@
                 <label for="correo" class="label-auth">Correo</label>
                 <input type="text" class="form-control" id="correo" placeholder="Correo">
             </div>
-            <div style="margin: 0; padding: 0;">
-                <label for="contra" class="label-auth">Contraseña</label>
-                <input type="text" class="form-control" id="usuarioCorreo" placeholder="Contraseña">
+            <div style="margin-top: 32px; padding: 0; display: flex; flex-direction: column;">
+                <label for="genero" class="label-auth">Género</label>
+                <select class="form-select customSelect" aria-label="Default select example" id="genero" required>
+                    <option disabled selected style="color: #b4b4b4;">Elegir opción</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">No especificar</option>
+                  </select>
             </div>
-            <div style="margin: 0; padding: 0; padding-bottom: 10px; margin-bottom: 10px;">
+            <div style="margin: 0; padding: 0; padding-bottom: 10px; position: relative;">
+                <label for="contra" class="label-auth">Contraseña</label>
+                <input type="password" class="form-control" id="contra" placeholder="Contraseña">
+                <img id="toggleContra" src="images/eye.png" alt="Mostrar/Ocultar" 
+                style="position: absolute; right: 10px; top: 73%; transform: translateY(-50%); cursor: pointer; width: 20px; height: 20px;">
+            </div>
+            <div style="margin: 0; padding: 0; padding-bottom: 10px; position: relative;">
                 <label for="confirmContra" class="label-auth">Confirmar contraseña</label>
-                <input type="text" class="form-control" id="confirmContra" placeholder="Confirmar contraseña">
+                <input type="password" class="form-control" id="confirmContra" placeholder="Confirmar contraseña" style="padding-right: 40px;">
+                <img id="toggleConfirmContra" src="images/eye.png" alt="Mostrar/Ocultar" 
+                style="position: absolute; right: 10px; top: 73%; transform: translateY(-50%); cursor: pointer; width: 20px; height: 20px;">
             </div>
             <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center;">
                 <button class="btn btn-iniSesion2" onclick="window.location.href='#'">Registrarse</button>
@@ -64,6 +81,30 @@
         </div>
     </div>
     <img src="images/fullHPIcon.png" alt="HPLogo" class="corner-image">
+    <script>
+        // Función para alternar la visibilidad de las contraseñas
+        function togglePassword(inputId, iconId) {
+            const inputField = document.getElementById(inputId);
+            const toggleIcon = document.getElementById(iconId);
+    
+            if (inputField.type === "password") {
+                inputField.type = "text";
+                toggleIcon.src = "images/eye-slash.png"; // Cambia a la imagen de ojo tapado
+            } else {
+                inputField.type = "password";
+                toggleIcon.src = "images/eye.png"; // Cambia a la imagen de ojo visible
+            }
+        }
+    
+        // Asignar los eventos de clic a los iconos de ojo
+        document.getElementById('toggleContra').addEventListener('click', function() {
+            togglePassword('contra', 'toggleContra');
+        });
+    
+        document.getElementById('toggleConfirmContra').addEventListener('click', function() {
+            togglePassword('confirmContra', 'toggleConfirmContra');
+        });
+    </script>
 </body>
 
 </html>
